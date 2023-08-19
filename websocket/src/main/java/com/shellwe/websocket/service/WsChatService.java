@@ -10,10 +10,7 @@ import com.shellwe.websocket.entity.Room;
 import com.shellwe.websocket.exception.businessLogicException.BusinessLogicException;
 import com.shellwe.websocket.exception.businessLogicException.ExceptionCode;
 import com.shellwe.websocket.mapper.RoomMapper;
-import com.shellwe.websocket.repository.MemberRepository;
-import com.shellwe.websocket.repository.MemberRoomRepository;
-import com.shellwe.websocket.repository.MessageRepository;
-import com.shellwe.websocket.repository.RoomRepository;
+import com.shellwe.websocket.repository.*;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.web.socket.TextMessage;
@@ -39,10 +36,11 @@ public class WsChatService extends com.shellwe.websocket.service.Service {
                          RoomRepository roomRepository,
                          MessageRepository messageRepository,
                          RoomMapper roomMapper,
+                         ShellRepository shellRepository,
                          ObjectMapper objectMapper,
                          AsyncService asyncService,
                          WsRoomService wsRoomService) {
-        super(memberRoomRepository, memberRepository, roomRepository, messageRepository, roomMapper);
+        super(memberRoomRepository, memberRepository, roomRepository, messageRepository, roomMapper,shellRepository);
         this.objectMapper = objectMapper;
         this.asyncService = asyncService;
         this.wsRoomService = wsRoomService;
