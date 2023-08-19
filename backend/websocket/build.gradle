@@ -42,6 +42,7 @@ dependencies {
 	testImplementation 'org.springframework.security:spring-security-test'
 	testImplementation("org.springframework.security:spring-security-test")
 	testImplementation 'org.springframework.restdocs:spring-restdocs-mockmvc'
+	testImplementation 'io.jsonwebtoken:jjwt-api:0.11.5'
 	asciidoctorExtensions 'org.springframework.restdocs:spring-restdocs-asciidoctor'
 
 //	implementation 'org.springframework.cloud:spring-cloud-starter-bootstrap:3.1.3'
