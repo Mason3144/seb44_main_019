@@ -1,0 +1,62 @@
+= 웹소켓 서버의 룸 관리 HTTP 요청
+:sectnums:
+:toc: left
+:toclevels: 4
+:toc-title: Table of Contents
+:source-highlighter: prettify
+
+Lee Tae Seop <lts890303@gmail.com>
+
+v1.0.0, 2023.07.14
+
+== ChatController
+=== Room 생성 (상대방의 거래요청 수락시)
+.curl-request
+include::{snippets}/post-room/curl-request.adoc[]
+
+.http-request
+include::{snippets}/post-room/http-request.adoc[]
+
+.request-headers
+include::{snippets}/post-room/request-headers.adoc[]
+
+.request-fields
+include::{snippets}/post-room/request-fields.adoc[]
+
+.http-response
+include::{snippets}/post-room/http-response.adoc[]
+
+.response-fields
+include::{snippets}/post-room/response-fields.adoc[]
+
+=== 현재 멤버에 활성화된 모든 룸 조회
+.curl-request
+include::{snippets}/get-rooms/curl-request.adoc[]
+
+.http-request
+include::{snippets}/get-rooms/http-request.adoc[]
+
+.request-headers
+include::{snippets}/get-rooms/request-headers.adoc[]
+
+.http-response
+include::{snippets}/get-rooms/http-response.adoc[]
+
+.response-fields
+include::{snippets}/get-rooms/response-fields.adoc[]
+
+=== Room 삭제
+.curl-request
+include::{snippets}/delete-room/curl-request.adoc[]
+
+.http-request
+include::{snippets}/delete-room/http-request.adoc[]
+
+.path-parameters
+include::{snippets}/delete-room/path-parameters.adoc[]
+
+.request-headers
+include::{snippets}/delete-room/request-headers.adoc[]
+
+.http-response
+include::{snippets}/delete-room/http-response.adoc[]
