@@ -180,5 +180,5 @@ Secret Manager를 활용하여 각 환경 변수를 암호화된 시크릿으로
 
 
 # 🔮 향후 보완점 및 회고
-1. 멀티 모듈 적용 <a href="https://mason-lee.tistory.com/161" target='_blank'> [블로그 링크] </a>, <a href="https://github.com/Mason3144/seb44_main_019/blob/main/backend/build.gradle" target='_blank'> [깃허브 링크] </a>
-2. ERD 최적화 <a href="https://mason-lee.tistory.com/160" target='_blank'> [링크] </a>
+1. 멀티 모듈 적용 (완료) <a href="https://mason-lee.tistory.com/161" target='_blank'> [블로그 링크] </a>, <a href="https://github.com/Mason3144/seb44_main_019/blob/main/backend/build.gradle" target='_blank'> [깃허브 링크] </a>
+2. ERD 최적화 <a href="https://mason-lee.tistory.com/160" target='_blank'> [링크] </a> 
