@@ -8,6 +8,8 @@ ShellWe는 사용자가 가진 “무언가”를 다른 사용자와 교환하�
 
 사용자는 자유롭게 자신의 제품들을 올리고 다른사용자의 제품과 매칭시킨 뒤 DM 기능을 이용하여 자유롭게 교류합니다.
 
+<br/>
+
 # 🧑🏻‍💻 Member
 
 <table>
@@ -55,6 +57,8 @@ ShellWe는 사용자가 가진 “무언가”를 다른 사용자와 교환하�
 </tbody>
 </table>
 
+<br/>
+
 # 📚 STACKS AND TOOLS
 
 <table class="images" width="100%"  style="border:0px solid white; width:100%; vertical-align : top;">
@@ -92,9 +96,12 @@ ShellWe는 사용자가 가진 “무언가”를 다른 사용자와 교환하�
     </tr>
 </table>
 
+<br/>
+
 # 📔 테이블 ERD
 <img src="https://github.com/Mason3144/github-practice/assets/59563548/659af75b-797b-40f3-bc66-cb5768f4f94a">
 
+<br/>
 
 # 📌 주요 기능 요약
 
@@ -115,31 +122,32 @@ ShellWe는 사용자가 가진 “무언가”를 다른 사용자와 교환하�
 - 이전 메세지 조회 및 전송
 - 웹소켓을 이용한 실시간 채팅
 
+<br/>
 
 # ⚙️ 내가 맡은 기능
 
 **웹소켓 서버 구현**
 
-- Spring Websocket 프레임워크를 활용하여 웹소켓 서버 구현 및 WS 프로토콜 연결 구현. <a href="https://github.com/Mason3144/seb44_main_019/tree/main/backend/websocket" target='_blank'> [링크] </a>
+- Spring Websocket 프레임워크를 활용하여 웹소켓 서버 구현 및 WS 프로토콜 연결 구현. <a href="https://github.com/Mason3144/seb44_main_019/tree/main/backend/websocket" target='_blank'> [세부 코드 링크] </a>
 
 **웹소켓 서버의 사용자 인증**
 
-- TCP의 3 Way-Handshake 단계에서 인증된 사용자 정보를 웹소켓 세션에 저장하여 보관. <a href="https://github.com/Mason3144/seb44_main_019/blob/main/backend/websocket/src/main/java/com/shellwe/back/handler/CustomHandshakeHandler.java" target='_blank'> [링크] </a> 
+- TCP의 3 Way-Handshake 단계에서 인증된 사용자 정보를 웹소켓 세션에 저장하여 보관. <a href="https://github.com/Mason3144/seb44_main_019/blob/main/backend/websocket/src/main/java/com/shellwe/back/handler/CustomHandshakeHandler.java" target='_blank'> [세부 코드 링크] </a> 
 - 동일 채팅방의 세션을 통해 내 정보 및 상대방 정보에 접근하여 DB 조회 횟수 최소화.
 
-**DM 기능 구현** <a href="https://github.com/Mason3144/seb44_main_019/blob/main/backend/websocket/src/main/java/com/shellwe/back/service/WsChatService.java" target='_blank'> [링크] </a>
+**DM 기능 구현** <a href="https://github.com/Mason3144/seb44_main_019/blob/main/backend/websocket/src/main/java/com/shellwe/back/service/WsChatService.java" target='_blank'> [세부 코드 링크] </a>
 
-- 채팅방 생성 및 삭제 기능(HTTP 프로토콜) 구현. <a href="https://github.com/Mason3144/seb44_main_019/blob/main/backend/websocket/src/main/java/com/shellwe/back/service/HttpService.java" target='_blank'> [링크] </a>
+- 채팅방 생성 및 삭제 기능(HTTP 프로토콜) 구현. <a href="https://github.com/Mason3144/seb44_main_019/blob/main/backend/websocket/src/main/java/com/shellwe/back/service/HttpService.java" target='_blank'> [세부 코드 링크] </a>
 - 사용자가 특정 URL(WS 프로토콜)에 접근 시 유니크한 세션 발급 및 해당 세션을 특정 룸(채팅방)에 입장 구현.
 - 사용자가 메세지 입력 시 웹소켓 서버가 해당 룸에 연결된 모든 세션에 해당 메세지 전송 구현.
 - 사용자 퇴장 시 연결된 룸에서 해당 사용자의 세션 제거 구현.
 
 **DB 설계 및 활용**
 
-- 사용자, 채팅방, 메세지 간 연관관계 설계 및 구현. <a href="https://github.com/Mason3144/seb44_main_019/tree/main/backend/core/src/main/java/com/shellwe/back/entity/websocket" target='_blank'> [링크] </a>  
-- 모든 메세지 기록을 비동기로 DB에 저장하여 사용자에게 빠른 서비스 제공, 이후 채팅방 입장시 이전 메세지들 로딩 구현. <a href="https://github.com/Mason3144/seb44_main_019/blob/main/backend/websocket/src/main/java/com/shellwe/back/service/AsyncService.java" target='_blank'> [링크] </a>
-- Thread pool을 이용하여 비동기 작업시 서버의 자원 소모 최적화. <a href="https://github.com/Mason3144/seb44_main_019/blob/main/backend/websocket/src/main/java/com/shellwe/back/config/SpringAsyncConfig.java" target='_blank'> [링크] </a>
-- SQL 쿼리문을 사용하여 비지니스 로직 최적화. <a href="https://github.com/Mason3144/seb44_main_019/blob/main/backend/websocket/src/main/java/com/shellwe/back/repository/MemberRoomRepository.java" target='_blank'> [링크] </a>
+- 사용자, 채팅방, 메세지 간 연관관계 설계 및 구현. <a href="https://github.com/Mason3144/seb44_main_019/tree/main/backend/core/src/main/java/com/shellwe/back/entity/websocket" target='_blank'> [세부 코드 링크] </a>  
+- 모든 메세지 기록을 비동기로 DB에 저장하여 사용자에게 빠른 서비스 제공, 이후 채팅방 입장시 이전 메세지들 로딩 구현. <a href="https://github.com/Mason3144/seb44_main_019/blob/main/backend/websocket/src/main/java/com/shellwe/back/service/AsyncService.java" target='_blank'> [세부 코드 링크] </a>
+- Thread pool을 이용하여 비동기 작업시 서버의 자원 소모 최적화. <a href="https://github.com/Mason3144/seb44_main_019/blob/main/backend/websocket/src/main/java/com/shellwe/back/config/SpringAsyncConfig.java" target='_blank'> [세부 코드 링크] </a>
+- SQL 쿼리문을 사용하여 비지니스 로직 최적화. <a href="https://github.com/Mason3144/seb44_main_019/blob/main/backend/websocket/src/main/java/com/shellwe/back/repository/MemberRoomRepository.java" target='_blank'> [세부 코드 링크] </a>
 
 **환경변수 관리**
 
@@ -147,7 +155,7 @@ ShellWe는 사용자가 가진 “무언가”를 다른 사용자와 교환하�
 - EC2 인스턴스 기능 장애에 대비하고 보안 강화 구현.
 
 
-
+<br/>
 
 # 📖 개발 내용(개발 당시 고려 사항)
 ### **서버과부화를 방지하기 위해 웹소켓과 백엔드 서버를 분리**
@@ -178,7 +186,15 @@ Secret Manager를 활용하여 각 환경 변수를 암호화된 시크릿으로
     - <a href="https://drive.google.com/file/d/1ve7AJY5Br1bZC3rMv1wG9nJeXMa8fF-l/view?usp=sharing" target="_blank">서비스 메뉴얼</a>
     - <a href="https://drive.google.com/file/d/18yYjZBhytMul4DuM2MaQZSGn1lOBNnQR/view?usp=sharing" target="_blank">사용자 요구사항 정의서</a>
 
+<br/>
+
+# 🤔 문제 해결
+- 윈도우 운영체제에서 Linux 쉘 스크립트 파일 작성시 발생한 에러 <a href="https://mason-lee.tistory.com/156" target='_blank'> [블로그 링크] </a>
+- ThreadPoolTaskExecutor를 이용한 스레드 풀 설정 <a href="https://mason-lee.tistory.com/155" target='_blank'> [블로그 링크] </a>
+- TCP 3-way handshake 단계에서 Spring Websocket의 Session에 Principal 정보 삽입 <a href="https://mason-lee.tistory.com/154" target='_blank'> [블로그 링크] </a>
+
+<br/>
 
 # 🔮 향후 보완점 및 회고
-1. 멀티 모듈 적용 (완료) <a href="https://mason-lee.tistory.com/161" target='_blank'> [블로그 링크] </a>, <a href="https://github.com/Mason3144/seb44_main_019/blob/main/backend/build.gradle" target='_blank'> [깃허브 링크] </a>
-2. ERD 최적화 <a href="https://mason-lee.tistory.com/160" target='_blank'> [링크] </a> 
+1. 멀티 모듈 적용 (완료) <a href="https://mason-lee.tistory.com/161" target='_blank'> [블로그 링크] </a>, <a href="https://github.com/Mason3144/seb44_main_019/blob/main/backend/build.gradle" target='_blank'> [세부 코드 링크] </a>
+2. ERD 최적화 <a href="https://mason-lee.tistory.com/160" target='_blank'> [블로그 링크] </a> 
