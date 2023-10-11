@@ -148,9 +148,10 @@ Spring Websocket 프레임워크를 활용하여 웹소켓 서버의 전체적�
 
 처음 웹소켓 서버를 설계했을 때에는, 사용자가 메세지를 보낼때마다 사용자의 고유정보를 클라이언트로 부터 전달받는 방식으로 설계하였고 두가지 문제점이 발생했습니다.
 1. 보안에 취약하다. 매 메세지마다 사용자의 고유정보를 함께보내게 되면서 해당 고유정보를 이용하여 다른 사용자의 채팅방에 간섭할 가능성이 있었습니다.
-2. 매 메세지마다 발신자의 정보를 위해 DB에 접근해야만 했습니다.
+2. 매 메세지 발신마다 발신자의 정보를 조회하기 위해 DB에 접근해야만 했습니다.
 
 위와 같은 이유로 다음과 같이 사용자 인증 흐름을 변경하게 되었습니다.
+
 1. Spring Security 프레임워크를 설치하여 사용자 인증 시점을 메세지 전송시가 아닌 처음 클라이언트와 서버의 웹소켓 프로토콜이 연결되는 시점으로 변경
 2. 클라이언트에서 넘겨받은 JWT를 이용하여 사용자 인증 진행 및 **SecurityContextHolder**에 사용자 정보 저장합니다.
 3. 이후 **DefaultHandshakeHandler** 클래스를 이용하여 사용자가 부여받은 **WebSocketSession**의 **Principal** 객체에 사용자 정보를 저장하여 인증을 마칩니다. 
@@ -227,10 +228,10 @@ MockMvc를 이용하여 HTTP의 컨트롤러와 서비스레이어에 대한 슬
 그렇게 프로젝트가 끝난 뒤 웹소켓과 백엔드로 나눠진 프로젝트를 하나의 프로젝트로 통합,
 이후 마이그레이션을 실행할 컴포넌트들의 범위를 정한 뒤 core 모듈을 생성하여 해당 컴포넌트들을 이동시켰습니다. 
 
-<img src="https://github.com/codestates-seb/ShellWe/assets/59563548/e67e4b73-e14a-4bb8-94b6-6ac21fd6fa7e">
-
 - <a href="https://github.com/Mason3144/seb44_main_019/commit/17167b03b50691a91e64a327bb2db8cfca6f20a0" target='_blank'> [커밋 내역] </a>
 - <a href="https://mason-lee.tistory.com/161" target='_blank'> [멀티모듈 블로그 링크] </a>
+
+<img src="https://github.com/codestates-seb/ShellWe/assets/59563548/e67e4b73-e14a-4bb8-94b6-6ac21fd6fa7e">
 
 ## ERD 재설계
 처음 ERD 설계 당시, 모든 연관관계를 양방향으로 설정하여 엔티티의 코드량이 증가하고 가독성도 떨어지며 개발자의 실수를 발생시킬 수 있는 
