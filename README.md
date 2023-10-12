@@ -224,7 +224,7 @@ MockMvc를 이용하여 HTTP의 컨트롤러와 서비스레이어에 대한 슬
 또한 AssertJ를 이용하여 JWT 인증과 MemberDetailsService에 대해 추가적인 유닛 테스트를 진행하였습니다.
 - <a href="https://github.com/Mason3144/seb44_main_019/tree/main/backend/websocket/src/test" target='_blank'> [테스트 패키지] </a>
 
-</br>
+<br/>
 
 # 🔮 릴리즈 이후 보완 상황
 
