@@ -74,41 +74,32 @@ ShellWe는 사용자가 가진 “무언가”를 다른 사용자와 교환하�
 <br/>
 
 # 📚 STACKS AND TOOLS
+### Back
+- Java Spring Boot
+- Spring Security
+- Spring Websocket
+- Spring data JPA
+- MySQL
+- Google Oauth2
+- Google SMTP
 
-<table class="images" width="100%"  style="border:0px solid white; width:100%; vertical-align : top;">
-    <tr style="border: 0px;">
-        <td style="border:0px; width:25%; height:200px; vertical-align : top;">
-            <h2 style="color: #337EA9; padding-top: 0px; margin-top: 0px;">Back</h2>
-            <div>&nbsp&nbsp• Java Spring Boot</div>
-            <div>&nbsp&nbsp• Spring Security</div>
-            <div>&nbsp&nbsp• Spring Websocket</div>
-            <div>&nbsp&nbsp• Spring data JPA</div>
-            <div>&nbsp&nbsp• MySQL</div>
-            <div>&nbsp&nbsp• Google Oauth2</div>
-            <div>&nbsp&nbsp• Google SMTP</div>
-        </td>
-        <td style="border:0px; width:25%; vertical-align : top;">
-            <h2 style="color: #D9730D; padding-top: 0px; margin-top: 0px;">Deploy</h2>
-            <div>&nbsp&nbsp• AWS S3</div>
-            <div>&nbsp&nbsp• AWS EC2</div>
-            <div>&nbsp&nbsp• Github Actions</div>
-        </td>
-        <td style="border:0px; width:25%; vertical-align : top;">
-            <h2 style="color: #D44C47; padding-top: 0px; margin-top: 0px;">Front</h2>
-            <div>&nbsp&nbsp• JavaScript</div>
-            <div>&nbsp&nbsp• React</div>
-            <div>&nbsp&nbsp• React Router</div>
-            <div>&nbsp&nbsp• Styled-components</div>
-        </td>
-        <td style="border:0px; width:25%; vertical-align : top;">
-            <h2 style="color: #CB912F; padding-top: 0px; margin-top: 0px;">Common</h2>
-            <div>&nbsp&nbsp• Git</div>
-            <div>&nbsp&nbsp• Github</div>
-            <div>&nbsp&nbsp• Notion</div>
-            <div>&nbsp&nbsp• Discord</div>
-        </td>
-    </tr>
-</table>
+### CI/CD
+- AWS S3
+- AWS EC2
+- Github Actions
+
+### Front
+- JavaScript
+- React
+- React Router
+- Styled-components
+
+### Common
+- Git
+- Github
+- Notion
+- Discord
+
 
 <br/>
 
