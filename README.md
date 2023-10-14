@@ -247,9 +247,37 @@ MockMvc를 이용하여 HTTP의 컨트롤러와 서비스레이어에 대한 슬
 <br/>
 
 # 🤔 문제 발생 및 해결
-- 윈도우 운영체제에서 Linux 쉘 스크립트 파일 작성시 발생한 에러 <a href="https://mason-lee.tistory.com/156" target='_blank'> [블로그 링크] </a>
-- ThreadPoolTaskExecutor를 이용한 스레드 풀 설정 <a href="https://mason-lee.tistory.com/155" target='_blank'> [블로그 링크] </a>
-- TCP 3-way handshake 단계에서 Spring Websocket의 Session에 Principal 정보 삽입 <a href="https://mason-lee.tistory.com/154" target='_blank'> [블로그 링크] </a>
+### 윈도우 운영체제에서 Linux 쉘 스크립트 파일 작성시 발생한 에러 
+이번 프로젝트는 깃헙 Actions를 이용한 배포 자동화가 적용되었습니다.
+
+배포 자동화 적용 이후, 정상적으로 커밋을 해도 자동 배포에서 계속 실패를 하게되었습니다.
+
+결국 여러가지 시도후, 문제의 원인이 윈도우즈 OS에서 쉘스크립트 파일 작성시 생길수 있는 버그라는것을 찾게되어 해결한 사례입니다. 
+
+- <a href="https://mason-lee.tistory.com/156" target='_blank'> [블로그 링크] </a>
+
+<img src="https://github.com/Mason3144/stub_data_server/assets/59563548/58688a41-1b12-4e86-9293-a69958a34a7a">
+[Github Actions 빌드 로그]
+
+
+### ThreadPoolTaskExecutor를 이용한 스레드 풀 설정 
+이번 프로젝트 이전에는 자바를 이용한 비동기 작업을 할때에 **Thread** 객체를 생성하여 **start()** 메서드를 사용했었습니다.
+
+하지만 같은 팀원의 조언으로 생성된 Thread에 대한 관리가 필요하단 것을 알게되어 **AsyncConfigurerSupport** 클래스를
+상속받아 **Thread Pool**을 설정하여 관리하게되었습니다. 
+
+- <a href="https://mason-lee.tistory.com/155" target='_blank'> [블로그 링크] </a>
+
+### TCP 3-way handshake 단계에서 Spring Websocket의 Session에 Principal 정보 삽입 
+HTTP 프로토콜의 경우 매 요청마다 header에 토큰을 담아 인증이 가능하기에 웹소켓 프로토콜도 메세지 전송마다 가능할거라 생각했지만 뜻대로 되지 않았습니다. <br>
+그에 따라 준수한 보안성을 가지는 다른 방식을 찾게 되었습니다.
+
+사용자가 웹소켓을 연결하는 시점에 토큰을 전달받아 인증을 진행하고 이후 **WebsocketSession** 객체의 **Principle**에 인증된 사용자 정보를 담아
+메세지를 교환한 뒤, 사용자가 웹소켓 연결을 끊는 시점에 해당 세션을 만료시키는 방식으로 구현하게 되었습니다.  
+
+- <a href="https://mason-lee.tistory.com/154" target='_blank'> [블로그 링크] </a>
+
+
 
 <br/>
 
