@@ -123,7 +123,7 @@ ShellWe는 사용자가 가진 “무언가”를 다른 사용자와 교환하�
 
 아래에는 프로젝트 기획당시 계획했던 어플리케이션 설계도입니다.
 
-<img src="https://github.com/Mason3144/stub_data_server/assets/59563548/c792c14e-7159-4c1c-b33b-208c112a969e">
+<img src="https://github.com/Mason3144/stub_data_server/assets/59563548/c792c14e-7159-4c1c-b33b-208c112a969e"> <br>
 [초기 어플리케이션 설계도]
 
 AWS-ELB로 분산 네트워크를 적용하고 목적에 맞게 두개의 EC2 인스턴스와 AWS-RDS를 개설하여 서버의 안정성과 빠른 속도의
