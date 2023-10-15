@@ -105,7 +105,7 @@ ShellWe는 사용자가 가진 “무언가”를 다른 사용자와 교환하�
 <br/>
 
 # 🗺️ 어플리케이션 설계도
-<img src="https://github.com/Mason3144/stub_data_server/assets/59563548/812868bd-5b9d-459b-914f-1d4829afd71a">
+<img src="https://github.com/Mason3144/stub_data_server/assets/59563548/812868bd-5b9d-459b-914f-1d4829afd71a"> <br>
 [현재 적용된 어플리케이션의 설계도]
 
 해당 설계도를 적용하면서 가장 크게 고려했던 점은 비용 문제였습니다.
